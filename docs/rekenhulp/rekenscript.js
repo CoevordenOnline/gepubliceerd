@@ -3,15 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
     totaalBedragElement.style.display = 'none'; // Verberg standaard het totaalbedrag
 
     document.getElementById('bereken').addEventListener('click', function () {
-        const vastTarief = 120; // Jaarlijks vast tarief afvalstoffenheffing
+        const vastTarief = 215; // Jaarlijks vast tarief afvalstoffenheffing
         let kosten = vastTarief; // Start met het vaste tarief
 
         const keuze = document.querySelector('input[name="afvalType"]:checked').value;
         const aantalInput = document.getElementById('aantal');
         const aantal = parseInt(aantalInput.value, 10);
 
-        const variabelTariefLedigingen = 10; // Kosten per lediging van de persoonlijke container
-        const variabelTariefInworpen = 2; // Kosten per inworp bij de ondergrondse container
+        const variabelTariefLedigingen = 9,60; // Kosten per lediging van de persoonlijke container
+        const variabelTariefInworpen = 2,40; // Kosten per inworp bij de ondergrondse container
 
         // Controleer of het invulveld leeg is
         if (isNaN(aantal) || aantalInput.value.trim() === "") {
