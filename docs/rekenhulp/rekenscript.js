@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const aantalInput = document.getElementById('aantal');
         const aantal = parseInt(aantalInput.value, 10);
 
-        const variabelTariefLedigingen = 9,60; // Kosten per lediging van de persoonlijke container
-        const variabelTariefInworpen = 2,40; // Kosten per inworp bij de ondergrondse container
+        const variabelTariefLedigingen = 9.60; // Kosten per lediging van de persoonlijke container
+        const variabelTariefInworpen = 2.40; // Kosten per inworp bij de ondergrondse container
 
         // Controleer of het invulveld leeg is
         if (isNaN(aantal) || aantalInput.value.trim() === "") {
