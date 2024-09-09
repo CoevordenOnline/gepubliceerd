@@ -27,15 +27,23 @@
                     <input type="radio" name="afvalType" value="persoonlijk-ondergronds" id="persoonlijk-ondergronds" class="form-check-input">
                     <label for="persoonlijk-ondergronds" class="form-check-label">Ledigingen en inworpen</label>
                 </div>
-                <br>
-                <!-- Invoerveld voor aantal ledigingen en/of inworpen -->
-                <label for="aantal" class="form-label">Aantal ledigingen en/of inworpen:</label>
-                <input type="number" class="form-control" id="aantal" aria-describedby="aantalHelp" min="0">
-                <div id="aantalHelp" class="form-text">Voer het aantal ledigingen en/of inworpen in.</div>
             </fieldset>
             <br>
+            
+            <!-- Invoervelden voor ledigingen en inworpen -->
+            <label for="aantalLedigingen" class="form-label">Aantal ledigingen (persoonlijke container):</label>
+            <input type="number" class="form-control" id="aantalLedigingen" aria-describedby="aantalLedigingenHelp" min="0">
+            <div id="aantalLedigingenHelp" class="form-text">Voer het aantal ledigingen in.</div>
+            <br>
+
+            <label for="aantalInworpen" class="form-label">Aantal inworpen (ondergrondse container):</label>
+            <input type="number" class="form-control" id="aantalInworpen" aria-describedby="aantalInworpenHelp" min="0">
+            <div id="aantalInworpenHelp" class="form-text">Voer het aantal inworpen in.</div>
+            <br>
+            
             <!-- Bereken knop -->
             <button id="bereken" class="btn btn-primary">Bereken kosten</button>
+
             <!-- Weergave van het totaalbedrag -->
             <div class="totaal-container">
                 <p id="totaalBedrag" class="fs-4 mt-3"></p>
