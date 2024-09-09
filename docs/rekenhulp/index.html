@@ -23,10 +23,14 @@
                 <input type="radio" name="afvalType" value="ondergronds" id="ondergronds" class="form-check-input">
                 <label for="ondergronds" class="form-check-label">Inworpen</label>
             </div>
+            <div class="form-check">
+                <input type="radio" name="afvalType" value="persoonlijk-ondergronds" id="persoonlijk-ondergronds" class="form-check-input">
+                <label for="persoonlijk-ondergronds" class="form-check-label">Ledigingen en inworpen</label>
+            </div>
             <br>
-            <label for="aantal" class="form-label">Aantal ledigingen of inworpen:</label>
+            <label for="aantal" class="form-label">Aantal ledigingen en/of inworpen:</label>
             <input type="number" class="form-control" id="aantal" aria-describedby="aantalHelp" min="0">
-            <div id="aantalHelp" class="form-text">Voer het aantal ledigingen of inworpen in.</div>
+            <div id="aantalHelp" class="form-text">Voer het aantal ledigingen en/of inworpen in.</div>
         </fieldset>
         <br>
         <button id="bereken" class="btn btn-primary">Bereken kosten</button>
