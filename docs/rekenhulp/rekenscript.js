@@ -2,7 +2,34 @@ document.addEventListener('DOMContentLoaded', function () {
     const totaalBedragElement = document.getElementById('totaalBedrag');
     totaalBedragElement.style.display = 'none'; // Verberg standaard het totaalbedrag
 
-    document.getElementById('bereken').addEventListener('click', function () {
+    const ledigingenContainer = document.getElementById('ledigingenContainer');
+    const inworpenContainer = document.getElementById('inworpenContainer');
+    const berekenKnop = document.getElementById('bereken');
+
+    // Functie om velden zichtbaar of onzichtbaar te maken
+    function toonVelden(keuze) {
+        if (keuze === 'persoonlijk') {
+            ledigingenContainer.classList.remove('hidden');
+            inworpenContainer.classList.add('hidden');
+        } else if (keuze === 'ondergronds') {
+            inworpenContainer.classList.remove('hidden');
+            ledigingenContainer.classList.add('hidden');
+        } else if (keuze === 'persoonlijk-ondergronds') {
+            ledigingenContainer.classList.remove('hidden');
+            inworpenContainer.classList.remove('hidden');
+        }
+        berekenKnop.classList.remove('hidden'); // Toon de knop zodra een keuze is gemaakt
+    }
+
+    // Event listener voor radio buttons om de velden te tonen
+    document.querySelectorAll('input[name="afvalType"]').forEach(function (radio) {
+        radio.addEventListener('change', function () {
+            toonVelden(this.value);
+        });
+    });
+
+    // Event listener voor de bereken-knop
+    berekenKnop.addEventListener('click', function () {
         const vastTarief = 215; // Jaarlijks vast tarief afvalstoffenheffing
         let kosten = vastTarief; // Start met het vaste tarief
 
@@ -37,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (keuze === 'ondergronds' && !isNaN(aantalInworpen)) {
             kosten += aantalInworpen * variabelTariefInworpen;
         } else if (keuze === 'persoonlijk-ondergronds') {
-            // Bereken kosten voor zowel ledigingen als inworpen als beide velden zijn ingevuld
             if (!isNaN(aantalLedigingen)) {
                 kosten += aantalLedigingen * variabelTariefLedigingen;
             }
