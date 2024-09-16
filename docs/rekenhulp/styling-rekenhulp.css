@@ -65,7 +65,7 @@ button, .button {
 
 button:hover, .button:hover {
     background-color: #4d7301; /* donkerder groene kleur */
-    color: #000; /* zwarte tekst */
+    color: #fff; /* witte tekst */
 }
 
 /* Invoervelden */
