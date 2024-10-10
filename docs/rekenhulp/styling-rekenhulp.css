@@ -46,15 +46,6 @@ ul, ol {
 
 li {
     margin-bottom: 0.5em;
-}
-/* Scrollbare container voor het formulier */
-.scroll-container {
-    max-height: 200px; /* Maximale hoogte van de container */
-    overflow-y: auto;  /* Voeg verticale scrollbar toe wanneer nodig */
-    padding: 15px;     /* Ruimte binnenin de container */
-    border: 1px solid #dcdcdc; /* Optioneel: een rand toevoegen voor visuele duidelijkheid */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Schaduw voor een subtiele diepte */
-}
 
 /* Knoppen */
 button, .button {
