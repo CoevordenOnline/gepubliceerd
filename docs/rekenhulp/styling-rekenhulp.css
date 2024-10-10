@@ -46,6 +46,7 @@ ul, ol {
 
 li {
     margin-bottom: 0.5em;
+}
 
 /* Knoppen */
 button, .button {
@@ -68,17 +69,26 @@ button:hover, .button:hover {
 }
 
 /* Invoervelden */
-input[type="text"], input[type="email"], input[type="number"], textarea {
-    width: 100%; /* Flexibele breedte */
+input[type="text"], input[type="email"], textarea, input[type="number"] {
+    width: 75%;
     padding: 10px;
-    margin-bottom: 15px; /* Ruimte tussen invoervelden */
-    border: 1px solid #ccc;
+    border: 1px solid #dcdcdc;
     border-radius: 5px;
     font-size: 1em;
-    box-sizing: border-box; /* Voorkom dat padding de breedte beïnvloedt */
-    resize: vertical; /* Invoervelden kunnen in hoogte vergroot worden */
+    color: #333;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
 
-    /* Flexibele container voor rekentool en invoervelden */
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus, input[type="number"]:focus {
+    border-color: #0054a6;
+    box-shadow: 0 0 5px rgba(0, 84, 166, 0.5);
+    outline: none;
+}
+}
+
+/* Flexibele container voor rekentool en invoervelden */
 .dynamic-container {
     display: flex;
     flex-direction: column; /* Stapel de inhoud verticaal */
