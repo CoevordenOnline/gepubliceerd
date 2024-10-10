@@ -49,7 +49,7 @@ li {
 }
 /* Scrollbare container voor het formulier */
 .scroll-container {
-    max-height: 400px; /* Maximale hoogte van de container */
+    max-height: 200px; /* Maximale hoogte van de container */
     overflow-y: auto;  /* Voeg verticale scrollbar toe wanneer nodig */
     padding: 15px;     /* Ruimte binnenin de container */
     border: 1px solid #dcdcdc; /* Optioneel: een rand toevoegen voor visuele duidelijkheid */
